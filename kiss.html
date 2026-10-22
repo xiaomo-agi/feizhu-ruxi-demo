@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💕 跟着《恶作剧之吻》打卡台湾 · 6天5晚手帐</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
+<style>
+:root{
+  --paper:#f7f1e6; --ink:#3a3a3a; --navy:#2c3a63; --navy-deep:#1f2a49;
+  --pink:#e89bb0; --pink-soft:#fdf0f3; --tape:#f0d9a8; --tape2:#d8e6c3;
+  --line:#d9cfbc; --gold:#c9a86a;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'LXGW WenKai','PingFang SC',serif;
+  background:var(--paper); color:var(--ink); line-height:1.8; font-size:16px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");
+}
+.wrap{max-width:700px;margin:0 auto;padding:28px 18px 80px}
+/* ---------- 封面拍立得 ---------- */
+.cover{background:#fff;padding:16px 16px 20px;box-shadow:0 12px 40px rgba(44,58,99,.18);
+  transform:rotate(-1.6deg);margin:20px 6px 10px;position:relative;
+  animation:drop .8s cubic-bezier(.2,.9,.3,1.2) both}
+.cover .photo{background:linear-gradient(135deg,#2c3a63 0%,#4a5f96 55%,#e89bb0 130%);
+  height:190px;border-radius:2px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;color:#fff;text-align:center;padding:20px}
+.cover .photo .kiss{font-size:15px;letter-spacing:.5em;opacity:.85;text-indent:.5em}
+.cover .photo h1{font-size:34px;margin:10px 0 6px;font-weight:700;letter-spacing:2px}
+.cover .photo .sub{font-size:14px;opacity:.9}
+.cover .caption{text-align:center;margin-top:14px;color:#6b6156;font-size:15px}
+.tape{position:absolute;width:96px;height:30px;background:var(--tape);opacity:.82;
+  top:-13px;left:50%;transform:translateX(-50%) rotate(-3deg);
+  box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.meta-strip{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:22px 0 8px;
+  animation:rise .7s .25s both}
+.meta-strip span{background:#fff;border:1.5px dashed var(--navy);border-radius:999px;
+  padding:5px 16px;font-size:14px;color:var(--navy)}
+/* ---------- 目录贴纸 ---------- */
+.toc{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:26px 0 34px;
+  animation:rise .7s .4s both}
+.toc a{text-decoration:none;font-size:14px;padding:6px 14px;border-radius:6px;
+  background:var(--pink-soft);color:#a5566e;border:1.5px solid #eec6d1;
+  transition:all .25s;transform:rotate(0)}
+.toc a:hover{transform:rotate(-2deg) scale(1.06);background:var(--pink);color:#fff}
+.toc a:nth-child(even){transform:rotate(1.2deg)}
+.toc a:nth-child(odd){transform:rotate(-1.2deg)}
+/* ---------- 章节头 ---------- */
+.sec-title{display:flex;align-items:center;gap:14px;margin:52px 0 20px}
+.sec-title .stamp{background:var(--navy);color:#fff;padding:8px 18px;font-size:18px;
+  border-radius:4px;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--pink)}
+.sec-title .line{flex:1;border-top:2px dashed var(--line)}
+/* ---------- 机票 ---------- */
+.ticket{background:#fff;border-radius:14px;box-shadow:0 8px 26px rgba(31,42,73,.12);
+  margin-bottom:18px;overflow:hidden;animation:rise .6s both}
+.ticket .t-head{background:var(--navy);color:#fff;padding:12px 20px;display:flex;
+  justify-content:space-between;align-items:center}
+.ticket .t-head .tag{background:var(--pink);color:#fff;font-size:12px;padding:2px 10px;
+  border-radius:999px;margin-right:8px}
+.ticket .t-body{padding:16px 20px}
+.ticket table{width:100%;border-collapse:collapse;font-size:14px}
+.ticket th{color:#9a8f7d;font-weight:400;font-size:12.5px;text-align:left;
+  border-bottom:1.5px dashed var(--line);padding:4px 6px}
+.ticket td{padding:8px 6px;border-bottom:1px solid #efe9dc}
+.ticket .rec{background:var(--pink-soft)}
+.ticket .t-tip{padding:10px 20px;font-size:13.5px;color:#7a7060;background:#fbf8f1}
+.stub{display:inline-block;margin:10px 20px 16px;text-decoration:none;
+  background:var(--navy);color:#fff;padding:9px 22px;font-size:14.5px;
+  border-radius:4px;position:relative;transition:all .25s;box-shadow:0 4px 12px rgba(44,58,99,.3)}
+.stub:hover{transform:translateY(-2px);background:var(--navy-deep);box-shadow:0 7px 18px rgba(44,58,99,.4)}
+.stub::before{content:'✂';position:absolute;left:-16px;color:#b7ab93;font-size:14px}
+/* ---------- 日卡 ---------- */
+.day-card{background:#fff;border-radius:4px;box-shadow:0 10px 30px rgba(31,42,73,.1);
+  margin:30px 0;overflow:hidden;position:relative;animation:rise .6s both}
+.day-card .d-head{display:flex;align-items:stretch}
+.day-card .d-num{background:var(--navy);color:#fff;min-width:96px;display:flex;
+  flex-direction:column;align-items:center;justify-content:center;padding:14px 8px}
+.day-card .d-num b{font-size:34px;line-height:1;font-family:Georgia,serif}
+.day-card .d-num i{font-style:normal;font-size:12px;letter-spacing:3px;opacity:.75;margin-top:4px}
+.day-card .d-title{flex:1;padding:14px 18px;display:flex;flex-direction:column;justify-content:center;
+  background:linear-gradient(90deg,#fff, #fdf8ef)}
+.day-card .d-title h3{font-size:18.5px;color:var(--navy-deep)}
+.day-card .d-title small{color:#9a8f7d;font-size:13px}
+.d-body{padding:6px 20px 18px}
+.blk{padding:14px 4px 14px;border-bottom:1px dashed #e8e0cf}
+.blk:last-child{border-bottom:none}
+.blk .b-title{font-size:16.5px;color:var(--navy-deep);margin-bottom:6px}
+.blk .b-title .emo{margin-right:6px}
+.blk p,.blk li{font-size:14.5px;color:#55503f}
+.blk ul{padding-left:20px;margin:4px 0}
+.note{background:var(--pink-soft);border-left:4px solid var(--pink);border-radius:0 8px 8px 0;
+  padding:10px 14px;margin:10px 0;font-size:13.5px;color:#8a5568}
+.warn{background:#fdf6e3;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;
+  padding:10px 14px;margin:10px 0;font-size:13.5px;color:#8c7137}
+/* 台词情书便签 */
+.quote{background:#fff9fb;border:1.5px solid #f2ccd8;border-radius:10px;
+  padding:14px 16px 12px;margin:14px 0;position:relative;transform:rotate(-.6deg);
+  box-shadow:2px 4px 10px rgba(232,155,176,.25);font-size:15.5px;color:#a5566e;text-align:center}
+.quote::before{content:'📌';position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-size:18px}
+.quote small{display:block;color:#c58f9f;font-size:12px;margin-top:5px}
+/* ---------- 小吃贴纸墙 ---------- */
+.food-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.food{background:#fff;border-radius:10px;padding:14px;box-shadow:0 5px 16px rgba(0,0,0,.08);
+  transition:all .3s;border:1px solid #f0e9da}
+.food:hover{transform:translateY(-4px) rotate(-1.5deg);box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.food b{display:block;color:var(--navy-deep);font-size:15.5px;margin-bottom:4px}
+.food span{font-size:12.5px;color:#978c78}
+.food:nth-child(3n){transform:rotate(1deg)} .food:nth-child(3n):hover{transform:rotate(2deg) translateY(-4px)}
+.food:nth-child(3n+1){transform:rotate(-1deg)}
+/* ---------- 预算账本 ---------- */
+.budget{background:linear-gradient(#fffdf6,#faf5e9);border:1.5px solid var(--line);
+  border-radius:12px;padding:20px;box-shadow:inset 0 0 40px rgba(201,168,106,.08)}
+.budget table{width:100%;border-collapse:collapse;font-size:14.5px}
+.budget td{padding:7px 4px;border-bottom:1px dashed #e5dcc8}
+.budget td:last-child{text-align:right;color:#7a6c4d}
+.budget .total{font-size:16px;color:var(--navy);font-weight:700;border-bottom:none;padding-top:12px}
+/* ---------- 贴士便利贴 ---------- */
+.tips{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.tip{background:var(--tape2);border-radius:2px;padding:14px 16px;font-size:13.5px;
+  box-shadow:3px 4px 10px rgba(0,0,0,.1);transform:rotate(-.8deg);color:#4e5c42}
+.tip:nth-child(even){transform:rotate(.9deg);background:#fdeecb}
+.tip b{color:#3e4a35;display:block;margin-bottom:3px;font-size:14.5px}
+/* ---------- 尾声 ---------- */
+.finale{margin-top:56px;text-align:center;padding:36px 20px;background:#fff;
+  border-radius:14px;box-shadow:0 12px 36px rgba(44,58,99,.12);transform:rotate(.5deg)}
+.finale .fq{font-size:18px;color:var(--navy);margin-bottom:10px}
+.finale p{color:#8a8172;font-size:14.5px}
+.seal{display:inline-block;margin-top:20px;border:2.5px solid #c96b6b;color:#c96b6b;
+  border-radius:8px;padding:6px 14px;font-size:13px;transform:rotate(-4deg);
+  letter-spacing:1px;opacity:.85}
+footer{margin-top:36px;text-align:center;font-size:12.5px;color:#a89c86}
+.nav{display:inline-block;font-size:12.5px;color:#fff;background:#5b77b0;text-decoration:none;
+  padding:2px 12px;border-radius:999px;margin-left:8px;vertical-align:2px;transition:all .2s}
+.nav:hover{background:var(--navy);transform:translateY(-1px)}
+.food img{width:100%;height:88px;object-fit:cover;border-radius:6px 6px 0 0;margin:-14px -14px 8px -14px;width:calc(100% + 28px)}
+/* 拍立得相框 */
+.polaroid{background:#fff;padding:10px 10px 8px;margin:16px auto;width:88%;
+  box-shadow:0 8px 22px rgba(31,42,73,.18);transform:rotate(-1.4deg)}
+.polaroid.rt{transform:rotate(1.3deg)}
+.polaroid img{width:100%;display:block;border-radius:2px;aspect-ratio:4/2.6;object-fit:cover;background:#eee}
+.polaroid .cap{text-align:center;font-size:13px;color:#8b8071;padding:7px 0 2px}
+@keyframes drop{from{opacity:0;transform:translateY(-40px) rotate(-5deg)}to{opacity:1;transform:translateY(0) rotate(-1.6deg)}}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:520px){
+  .cover .photo h1{font-size:26px}
+  .day-card .d-num{min-width:74px}
+  .day-card .d-num b{font-size:26px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 封面 -->
+  <div class="cover">
+    <div class="tape"></div>
+    <div class="photo">
+      <div class="kiss">ITAZURA NA KISS</div>
+      <h1>恶作剧之吻</h1>
+      <div class="sub">跟着直树和湘琴 · 打卡台湾 6天5晚</div>
+    </div>
+    <div class="caption">一场蓄谋已久的「偶遇」<br>📍 广州出发 · 🎬 剧集取景地 · 🍽 名小吃打卡</div>
+  </div>
+  <div class="meta-strip">
+    <span>📅 11.15 — 11.20</span><span>🚄 台北 × 淡水 × 九份 × 台中</span><span>🎓 鹊桥 · 递情书的地方</span>
+  </div>
+
+  <!-- 目录 -->
+  <nav class="toc">
+    <a href="#flights">✈️ 航班</a><a href="#hotel">🏨 住宿</a>
+    <a href="#day1">D1 夜市开场</a><a href="#day2">D2 淡水核心</a>
+    <a href="#day3">D3 市区巡礼</a><a href="#day4">D4 天灯</a>
+    <a href="#day5">D5 静宜鹊桥</a><a href="#day6">D6 返程</a>
+    <a href="#food">🍽 小吃清单</a><a href="#budget">💰 预算</a>
+  </nav>
+
+  <!-- 航班 -->
+  <div class="sec-title" id="flights"><span class="stamp">✈️ 往返机票</span><span class="line"></span></div>
+
+  <div class="ticket">
+    <div class="t-head"><span><span class="tag">去程</span>11.15 周日</span><span>广州 → 台北</span></div>
+    <div class="t-body"><table>
+      <tr><th>航班</th><th>航司</th><th>出发</th><th>到达</th><th>价格</th></tr>
+      <tr class="rec"><td><b>BR708</b> ⭐</td><td>长荣航空</td><td>白云T3 11:25</td><td>桃园T2 13:35</td><td><b>¥1,874</b></td></tr>
+      <tr><td>CZ3097</td><td>南航</td><td>白云T2 12:15</td><td>桃园T2 14:15</td><td>¥3,311</td></tr>
+      <tr><td>CX923+488</td><td>国泰</td><td>白云T3 05:45</td><td>桃园T1 09:40</td><td>¥1,059</td></tr>
+    </table></div>
+    <div class="t-tip">💡 推荐长荣 BR708：11:25 起飞不用赶早，13:35 到台北下午就能玩，直飞不折腾。</div>
+    <a class="stub" href="https://router.feizhu.com/multi/webview?url=https%3A%2F%2Frouter.feizhu.com%2Fws%2F3exdKd">预订去程 BR708 →</a>
+  </div>
+
+  <div class="ticket">
+    <div class="t-head"><span><span class="tag">返程</span>11.20 周五</span><span>台北 → 广州</span></div>
+    <div class="t-body"><table>
+      <tr><th>航班</th><th>航司</th><th>出发</th><th>到达</th><th>价格</th></tr>
+      <tr class="rec"><td><b>CI521</b> ⭐</td><td>中华航空</td><td>桃园T2 14:05</td><td>白云T2 16:15</td><td><b>¥1,682</b></td></tr>
+      <tr><td>CZ3098</td><td>南航</td><td>桃园T2 15:30</td><td>白云T2 17:40</td><td>¥1,304</td></tr>
+      <tr><td>BR707</td><td>长荣</td><td>桃园T2 08:10</td><td>白云T3 10:15</td><td>¥1,642</td></tr>
+    </table></div>
+    <div class="t-tip">💡 推荐华航 CI521：14:05 起飞，上午还能逛逛吃个午饭，16:15 到广州不晚。</div>
+    <a class="stub" href="https://router.feizhu.com/multi/webview?url=https%3A%2F%2Frouter.feizhu.com%2Fws%2F2hWVnN">预订返程 CI521 →</a>
+  </div>
+
+  <!-- 住宿 -->
+  <div class="sec-title" id="hotel"><span class="stamp">🏨 住宿 5 晚</span><span class="line"></span></div>
+  <div class="ticket">
+    <div class="t-head"><span>建议住台北车站 / 西门町</span><span>捷运四通八达</span></div>
+    <div class="t-body"><table>
+      <tr><th>酒店</th><th>位置</th><th>价格/晚</th><th>亮点</th></tr>
+      <tr class="rec"><td><b>诗漫精品旅馆</b> ⭐</td><td>台北车站旁</td><td><b>¥386</b></td><td>步行5分钟到车站</td></tr>
+      <tr><td>旅乐序精品旅馆</td><td>馆前路</td><td>¥583</td><td>近台北车站</td></tr>
+      <tr><td>喜瑞饭店</td><td>长安东路</td><td>¥625</td><td>交通枢纽旁</td></tr>
+      <tr><td>天阁酒店（复兴馆）</td><td>复兴北路</td><td>¥732</td><td>高档型·近夜市</td></tr>
+      <tr><td>兄弟大饭店</td><td>南京东路</td><td>¥905</td><td>高档型·近松山文创</td></tr>
+    </table></div>
+    <div class="t-tip">💡 推荐诗漫：¥386/晚 × 5 晚不到 ¥2,000，就在车站旁，去淡水、北投、九份都方便。</div>
+    <div class="polaroid"><img src="https://img.alicdn.com/imgextra/i1/6000000002116/O1CN01V2T6vT1RVAqu6Tif1_!!6000000002116-0-fliggyimage.jpg" alt="台北诗漫精品旅馆"><div class="cap">今晚睡这里 · 台北车站旁</div></div>
+    <a class="stub" href="https://router.feizhu.com/multi/webview?url=https%3A%2F%2Frouter.feizhu.com%2Fws%2F1hiDew">预订诗漫精品旅馆 →</a>
+  </div>
+
+  <!-- Day 1 -->
+  <div class="day-card" id="day1">
+    <div class="d-head"><div class="d-num"><b>01</b><i>DAY</i></div>
+      <div class="d-title"><h3>抵达台北 · 夜市开场</h3><small>11月15日 周日 · 慢慢来，先感受这座城</small></div></div>
+    <div class="d-body">
+      <div class="blk"><div class="b-title"><span class="emo">🌤</span>下午 · 安顿 + 西门町 <a class="nav" href="https://uri.amap.com/marker?position=121.4589,25.0408&name=西门町" target="_blank">📍导航</a></div>
+        <ul><li>13:35 抵达桃园机场 → 机场捷运至台北车站（约35分钟）</li>
+        <li>入住酒店放好行李，不急着出门</li>
+        <li>步行逛<b>西门町</b>：万年大楼文创小店 · 西门红楼拍照 · 一杯珍珠奶茶开局</li></ul></div>
+      <div class="blk"><div class="b-title"><span class="emo">🌙</span>晚上 · 夜市美食开场 <a class="nav" href="https://uri.amap.com/marker?position=121.5217,25.0517&name=宁夏夜市" target="_blank">📍导航</a></div>
+        <ul><li>宁夏夜市 or 士林夜市</li>
+        <li>🥘 蚵仔煎（湘琴最爱！）· 🍜 大肠包小肠 · 🧋 鸡排 + 鲜榨果汁 · 🍧 芋圆 / 芒果冰</li></ul>
+        <div class="note">🎬 湘琴在夜市打工的场景，就是这种热闹的台湾夜市氛围里！</div>
+        <div class="polaroid rt"><img src="https://img.alicdn.com/tfscom/TB12aAAe2DH8KJjy1XcSuwpdXXa" alt="西门町"><div class="cap">D1 · 西门町，热闹开场 🏮</div></div></div>
+    </div>
+  </div>
+
+  <!-- Day 2 -->
+  <div class="day-card" id="day2">
+    <div class="d-head"><div class="d-num"><b>02</b><i>DAY</i></div>
+      <div class="d-title"><h3>淡水！恶吻核心打卡日</h3><small>11月16日 周一 · 整趟旅行的重头戏</small></div></div>
+    <div class="d-body">
+      <div class="blk"><div class="b-title"><span class="emo">🚇</span>上午 · 捷运淡水线巡礼 <a class="nav" href="https://uri.amap.com/marker?position=121.4456,25.1389&name=忠义站·复兴岗天桥" target="_blank">📍导航</a></div>
+        <ul><li>台北车站搭淡水信义线（红线）往淡水方向</li>
+        <li><b>📍 忠义站 ↔ 复兴岗站</b>——缘分开始的地方：湘琴和直树每天上学的路段</li>
+        <li>出站找<b>天桥</b>，剧中反复出现的经典场景，拍一张「湘琴视角」</li></ul>
+        <div class="quote">「我想我会开始想念你，可是我刚刚才遇见了你」<small>—— 天桥上，风把心事吹散</small></div></div>
+      <div class="blk"><div class="b-title"><span class="emo">🏫</span>上午 · 淡江中学 <a class="nav" href="https://uri.amap.com/marker?position=121.4453,25.1694&name=淡江中学" target="_blank">📍导航</a></div>
+        <ul><li>📍 私立淡江高级中学（淡水区真理街26号），捷运淡水站步行约15分钟</li>
+        <li>剧中<b>复兴中学</b>取景地，也是《不能说的秘密》拍摄地</li>
+        <li>欧式红砖建筑：校门 · 礼堂 · 躲过雨的屋檐</li></ul>
+        <div class="warn">⚠️ 学校需提前官网预约参观，出发前一定要搞定！</div>
+        <div class="polaroid"><img src="https://img.alicdn.com/imgextra/i3/O1CN01fkbJ181ocFyWKEgw3_!!0-travel.jpg" alt="淡江中学"><div class="cap">D2 · 淡江中学，复兴中学的红砖记忆 🏫</div></div></div>
+      <div class="blk"><div class="b-title"><span class="emo">🍽</span>中午 · 淡江阿给 <a class="nav" href="https://uri.amap.com/marker?position=121.4451,25.1692&name=阿给老店" target="_blank">📍导航</a></div>
+        <ul><li>淡江中学旁老店：<b>阿给</b>（油豆腐塞粉丝淋甜辣酱）+ 鱼丸汤</li></ul></div>
+      <div class="blk"><div class="b-title"><span class="emo">🏛</span>下午 · 真理大学 + 淡水老街 <a class="nav" href="https://uri.amap.com/marker?position=121.4448,25.1696&name=真理大学" target="_blank">📍导航</a></div>
+        <ul><li>真理大学（淡江中学隔壁）：1872 年教会学校，红砖回廊 + 钟楼</li>
+        <li>淡水老街（中正路）：铁蛋 · 鱼酥 · 酸梅汤</li></ul>
+        <div class="polaroid"><img src="https://img.alicdn.com/bao/uploaded/i1/6000000003709/O1CN01pn3S6OUIaEL1Qcds_!!6000000003709-0-itemdesc.jpg" alt="淡水"><div class="cap">D2 · 淡水，缘分开始的地方 🚇</div></div></div>
+      <div class="blk"><div class="b-title"><span class="emo">🌅</span>傍晚 · 黄金海岸看夕阳 <a class="nav" href="https://uri.amap.com/marker?position=121.42,25.1589&name=淡水黄金海岸" target="_blank">📍导航</a></div>
+        <ul><li>📍 淡水黄金海岸（渔人码头附近），夕阳把海面染成金色</li>
+        <li>🌅 11月日落约 17:15，建议 16:30 到</li></ul>
+        <div class="quote">「躲在屋檐避雨的你，是否也在看同一片天空？」<small>—— 海风就是 BGM</small></div>
+        <div class="polaroid rt"><img src="https://img.alicdn.com/tfscom/TB1prdgidzJ8KJjSspkSuvF7VXa" alt="淡水夕阳"><div class="cap">D2 · 黄金海岸，17:15 的日落 🌅</div></div></div>
+      <div class="blk"><div class="b-title"><span class="emo">🌙</span>晚上 · 师大夜市 <a class="nav" href="https://uri.amap.com/marker?position=121.5289,25.0233&name=师大夜市" target="_blank">📍导航</a></div>
+        <ul><li>本地大学生最爱，比士林地道：盐酥鸡 · 蚵仔面线 · 割包 · 地瓜球</li></ul></div>
+    </div>
+  </div>
+
+  <!-- Day 3 -->
+  <div class="day-card" id="day3">
+    <div class="d-head"><div class="d-num"><b>03</b><i>DAY</i></div>
+      <div class="d-title"><h3>台北市区经典巡礼</h3><small>11月17日 周二 · 101 → 袖珍博物馆 → 故宫 → 摩天轮</small></div></div>
+    <div class="d-body">
+      <div class="blk"><div class="b-title"><span class="emo">🏙</span>上午 · 台北101 观景台 <a class="nav" href="https://uri.amap.com/marker?position=121.5654,25.033&name=台北101" target="_blank">📍导航</a></div>
+        <ul><li>89 楼俯瞰全城，天气好能看到淡水河入海口 · 门票约 ¥107</li></ul>
+        <div class="polaroid rt"><img src="https://img.alicdn.com/tfscom/TB1TbR0imfD8KJjSszhSuvIJFXa" alt="台北101"><div class="cap">D3 · 从 89 楼看整座台北 🌆</div></div>
+        <a class="stub" href="https://router.feizhu.com/multi/webview?url=https%3A%2F%2Frouter.feizhu.com%2Fws%2F2yhFX1">查看台北101门票 →</a></div>
+      <div class="blk"><div class="b-title"><span class="emo">🔬</span>下午 · 袖珍博物馆 <a class="nav" href="https://uri.amap.com/marker?position=121.5433,25.05&name=袖珍博物馆" target="_blank">📍导航</a></div>
+        <ul><li>📍 建国北路一段96号B1 · 亚洲第一座袖珍艺术博物馆</li>
+        <li>🎬 《恶作剧之吻》SHE 奇幻旅程取景地，微缩场景超精致</li></ul></div>
+      <div class="blk"><div class="b-title"><span class="emo">🏛</span>下午 · 台北故宫 <a class="nav" href="https://uri.amap.com/marker?position=121.5333,25.1&name=台北故宫" target="_blank">📍导航</a></div>
+        <ul><li>翠玉白菜 · 肉形石 · 毛公鼎三大镇馆之宝 · 门票约 ¥63，逛 2-3 小时</li></ul>
+        <div class="polaroid"><img src="https://img.alicdn.com/tfscom/TB1v1UTewfH8KJjy1zcSuwTzpXa" alt="台北故宫"><div class="cap">D3 · 故宫，三大镇馆之宝 🏺</div></div>
+        <a class="stub" href="https://router.feizhu.com/multi/webview?url=https%3A%2F%2Frouter.feizhu.com%2Fws%2F1XDU8B">查看故宫门票 →</a></div>
+      <div class="blk"><div class="b-title"><span class="emo">🎡</span>傍晚 · 美丽华摩天轮 <a class="nav" href="https://uri.amap.com/marker?position=121.5567,25.0833&name=美丽华摩天轮" target="_blank">📍导航</a></div>
+        <ul><li>🎬 直树和湘琴<b>结婚一周年</b>坐的摩天轮！透明车厢看台北夜景</li>
+        <li>一定要傍晚去：日落 + 夜景一次收</li></ul>
+        <div class="quote">想象湘琴在摩天轮上紧张又期待的样子，浪漫满分 💕<small>—— 恶迷的仪式感</small></div></div>
+      <div class="blk"><div class="b-title"><span class="emo">🌙</span>晚上 · 宁夏夜市</div>
+        <ul><li>蚵仔煎 · 润饼 · 卤肉饭 · 花枝羹，边走边吃就是最台湾的体验</li></ul></div>
+    </div>
+  </div>
+
+  <!-- Day 4 -->
+  <div class="day-card" id="day4">
+    <div class="d-head"><div class="d-num"><b>04</b><i>DAY</i></div>
+      <div class="d-title"><h3>九份 + 十分 · 放天灯许心愿</h3><small>11月18日 周三 · 山城 · 铁轨 · 温泉</small></div></div>
+    <div class="d-body">
+      <div class="blk"><div class="b-title"><span class="emo">🏮</span>上午 · 九份老街 <a class="nav" href="https://uri.amap.com/marker?position=121.84,25.11&name=九份老街" target="_blank">📍导航</a></div>
+        <ul><li>台北→瑞芳（火车约1小时）→九份（巴士约15分钟），或一日游拼车（约¥139-208）</li>
+        <li>红灯笼 · 石阶路 · 茶楼——《千与千寻》汤屋灵感来源</li>
+        <li>🍡 赖阿婆芋圆 · 草仔粿 · 鱼丸；📸 竖崎路石阶是最佳机位</li></ul>
+        <div class="polaroid rt"><img src="https://img.alicdn.com/bao/uploaded/i2/2216047494380/O1CN019wxD8d1iE5lnrFdJf_!!2216047494380.jpg" alt="九份"><div class="cap">D4 · 九份，红灯笼与山城石阶 🏮</div></div>
+        <a class="stub" href="https://router.feizhu.com/multi/webview?url=https%3A%2F%2Frouter.feizhu.com%2Fws%2F482NAu">查看九份一日游 →</a></div>
+      <div class="blk"><div class="b-title"><span class="emo">🎋</span>下午 · 十分老街放天灯 <a class="nav" href="https://uri.amap.com/marker?position=121.7533,25.0367&name=十分老街" target="_blank">📍导航</a></div>
+        <ul><li>铁轨穿过的老街，火车从身边呼啸而过</li>
+        <li><b>在天灯上写心愿看它升空</b>，铁轨照是台湾旅行经典打卡</li></ul>
+        <div class="polaroid"><img src="https://img.alicdn.com/imgextra/i2/6000000003192/O1CN01E6yczK1ZRywnL0s1A_!!6000000003192-0-fliggyimage.jpg" alt="十分天灯"><div class="cap">D4 · 十分，把心愿放上天空 🎋</div></div>
+        <div class="polaroid rt"><img src="https://img.alicdn.com/imgextra/i4/6000000001741/O1CN01D6gTpx1OjQOvdebAX_!!6000000001741-0-fliggyimage.jpg" alt="九份夜景"><div class="cap">D4 · 九份，千与千寻的灯火了 🏮</div></div></div>
+      <div class="blk"><div class="b-title"><span class="emo">♨️</span>傍晚 · 北投温泉 <a class="nav" href="https://uri.amap.com/marker?position=121.5,25.1333&name=北投温泉" target="_blank">📍导航</a></div>
+        <ul><li>回程顺路北投泡汤解乏：春天温泉（个人汤屋/露天风吕）约 ¥85 起</li>
+        <li>🎬 北投也是剧中湘琴打工的三哥凉面所在区域</li></ul>
+        <a class="stub" href="https://router.feizhu.com/multi/webview?url=https%3A%2F%2Frouter.feizhu.com%2Fws%2F18dxw7">查看北投温泉 →</a></div>
+      <div class="blk"><div class="b-title"><span class="emo">🌙</span>晚上 · 牛肉面收尾 <a class="nav" href="https://uri.amap.com/marker?position=121.5289,25.0456&name=林东芳牛肉面" target="_blank">📍导航</a></div>
+        <ul><li>林东芳 or 永康牛肉面：半筋半肉 + 小菜，台湾牛肉面的天花板</li></ul></div>
+    </div>
+  </div>
+
+  <!-- Day 5 -->
+  <div class="day-card" id="day5">
+    <div class="d-head"><div class="d-num"><b>05</b><i>DAY</i></div>
+      <div class="d-title"><h3>台中一日 · 静宜大学鹊桥</h3><small>11月19日 周四 · 最重要的校园取景地！</small></div></div>
+    <div class="d-body">
+      <div class="blk"><div class="b-title"><span class="emo">🚄</span>上午 · 高铁南下台中</div>
+        <ul><li>台北→台中约1小时（约¥400-500），建议 8:00 左右出发</li></ul></div>
+      <div class="blk"><div class="b-title"><span class="emo">🎓</span>上午 · 静宜大学（核心打卡！） <a class="nav" href="https://uri.amap.com/marker?position=120.5539,24.2356&name=静宜大学·任垣楼鹊桥" target="_blank">📍导航</a></div>
+        <ul><li>📍 台中市沙鹿区台湾大道七段200号，台中车站打车/公车约30分钟</li>
+        <li>🎬 <b>任垣楼 5F 鹊桥</b>——湘琴向直树递情书的地方！悬空连接两栋教学楼</li>
+        <li>站在桥上还原递情书的经典画面 · 红色外墙建筑群依山而建</li></ul>
+        <div class="warn">⚠️ 建议提前确认校园参观政策</div>
+        <div class="quote">「我想我会开始想念你，可是我刚刚才遇见了你」<small>—— 站在鹊桥上，主题曲自动响起</small></div></div>
+      <div class="blk"><div class="b-title"><span class="emo">🍽</span>中午 · 台中美食 <a class="nav" href="https://uri.amap.com/marker?position=120.6467,24.1617&name=春水堂本店" target="_blank">📍导航</a></div>
+        <ul><li>🧈 太阳饼（伴手礼）· 🍜 大肠面线 · 🧋 珍奶发源地「春水堂」本店</li></ul></div>
+      <div class="blk"><div class="b-title"><span class="emo">🌿</span>下午 · 高美湿地 or 宫原眼科 <a class="nav" href="https://uri.amap.com/marker?position=120.5267,24.2933&name=高美湿地" target="_blank">📍导航</a></div>
+        <ul><li>天气好 → 高美湿地：风机 + 湿地夕阳</li>
+        <li>或回市区 → 宫原眼科：日据医院改建甜品店，芒果雪花冰 + 凤梨酥</li></ul>
+        <div class="polaroid"><img src="https://img.alicdn.com/tfscom/TB1AuMZh8fH8KJjy1XbSuvLdXXa" alt="高美湿地"><div class="cap">D5 · 高美湿地，风车与夕阳 🌾</div></div></div>
+      <div class="blk"><div class="b-title"><span class="emo">🌙</span>傍晚 · 返台北 · 饶河街夜市 <a class="nav" href="https://uri.amap.com/marker?position=121.5789,25.0489&name=饶河街夜市" target="_blank">📍导航</a></div>
+        <ul><li>高铁回程（约1小时）· 药炖排骨 · 葱抓饼 · 胡椒饼——最后一个夜市，把想吃的全吃一遍</li></ul></div>
+    </div>
+  </div>
+
+  <!-- Day 6 -->
+  <div class="day-card" id="day6">
+    <div class="d-head"><div class="d-num"><b>06</b><i>DAY</i></div>
+      <div class="d-title"><h3>最后的台北 · 返程</h3><small>11月20日 周五 · 扫货 · 卤肉饭收官</small></div></div>
+    <div class="d-body">
+      <div class="blk"><div class="b-title"><span class="emo">🛍</span>上午 · 最后的扫货 <a class="nav" href="https://uri.amap.com/marker?position=121.5178,25.0478&name=京站时尚广场" target="_blank">📍导航</a></div>
+        <ul><li>台北车站/京站：凤梨酥（微热山丘）· 牛轧糖 · 茶叶</li>
+        <li>或松山文创园区：独立设计品牌，有质感的小礼物</li></ul></div>
+      <div class="blk"><div class="b-title"><span class="emo">🍚</span>中午 · 最后一顿台湾味 <a class="nav" href="https://uri.amap.com/marker?position=121.5189,25.0467&name=金峰卤肉饭" target="_blank">📍导航</a></div>
+        <ul><li>金峰卤肉饭（台北车站附近）+ 味噌汤，完美收官</li></ul></div>
+      <div class="blk"><div class="b-title"><span class="emo">✈️</span>下午 · 返程</div>
+        <ul><li>机场捷运至桃园（约35分钟）· 14:05 华航 CI521 → 16:15 广州</li></ul></div>
+    </div>
+  </div>
+
+  <!-- 小吃 -->
+  <div class="sec-title" id="food"><span class="stamp">🍽 必吃清单</span><span class="line"></span></div>
+  <div class="food-grid">
+  <div class="food"><img src="https://img.alicdn.com/imgextra/i4/6000000005874/O1CN01cb8sjmsDwQC1chua_!!6000000005874-0-itemdesc.jpg" alt="🥘 蚵仔煎"><b>🥘 蚵仔煎</b><span>各夜市 · 湘琴同款！</span></div>
+  <div class="food"><img src="https://img.alicdn.com/imgextra/i5/6000000000385/O1CN0132rvHgifJOF2vH2e_!!6000000000385-0-itemdesc.jpg" alt="🍜 牛肉面"><b>🍜 牛肉面</b><span>林东芳 / 永康</span></div>
+  <div class="food"><img src="https://img.alicdn.com/imgextra/i4/6000000007279/O1CN01ZNmBe1UBxGG1chua_!!6000000007279-0-itemdesc.jpg" alt="🍚 卤肉饭"><b>🍚 卤肉饭</b><span>金峰 · 家常味天花板</span></div>
+  <div class="food"><img src="https://img.alicdn.com/imgextra/i3/6000000006323/O1CN01S0tAwbszHAC1chua_!!6000000006323-2-itemdesc.png" alt="🧋 珍珠奶茶"><b>🧋 珍珠奶茶</b><span>春水堂台中本店 · 发源地</span></div>
+  <div class="food"><img src="https://img.alicdn.com/imgextra/i2/2216047494380/O1CN019wxD8d1iE5lnrFdJf_!!2216047494380.jpg" alt="🍢 大肠包小肠"><b>🍢 大肠包小肠</b><span>各夜市 · 台式热狗</span></div>
+  <div class="food"><img src="https://img.alicdn.com/imgextra/i4/2213743027/O1CN019hXpVib788B1chua_!!2413743027.jpg" alt="🍡 芋圆"><b>🍡 芋圆</b><span>九份赖阿婆</span></div>
+  <div class="food"><img src="https://img.alicdn.com/imgextra/i4/6000000002697/O1CN01VLDlk50F6XG1chua_!!6000000002697-0-itemdesc.jpg" alt="🥚 铁蛋"><b>🥚 铁蛋</b><span>淡水老街特产</span></div>
+  <div class="food"><img src="https://img.alicdn.com/imgextra/i2/6000000003106/O1CN01m2y7SO1YobKBILkSE_!!6000000003106-0-itemdesc.jpg" alt="🧈 太阳饼"><b>🧈 太阳饼</b><span>台中 · 伴手礼首选</span></div>
+  <div class="food"><img src="https://img.alicdn.com/imgextra/i3/6000000003254/O1CN01Gmg2K11ZuNe8yZzjO_!!6000000003254-0-fliggyimage.jpg" alt="🍢 阿给"><b>🍢 阿给</b><span>淡江中学旁 · 淡水特有</span></div>
+  <div class="food"><img src="https://img.alicdn.com/imgextra/i4/6000000005306/O1CN0189d9pTF5stJ1chua_!!6000000005306-0-itemdesc.jpg" alt="🍧 芒果雪花冰"><b>🍧 芒果雪花冰</b><span>宫原眼科 · 甜品控必去</span></div>
+  <div class="food"><img src="https://img.alicdn.com/imgextra/i1/6000000005894/O1CN01rnz0cpEPjTB1chua_!!6000000005894-0-itemdesc.jpg" alt="🍗 盐酥鸡"><b>🍗 盐酥鸡</b><span>各夜市 · 台湾版炸鸡</span></div>
+  <div class="food"><img src="https://img.alicdn.com/imgextra/i3/2220815971761/O1CN01hs2UCB1OsaZKRDlQt_!!2220815971761.png" alt="🥟 割包"><b>🥟 割包</b><span>宁夏夜市 · 台式汉堡</span></div>
+  </div>
+
+  <!-- 预算 -->
+  <div class="sec-title" id="budget"><span class="stamp">💰 预算账本</span><span class="line"></span></div>
+  <div class="budget"><table>
+    <tr><td>✈️ 往返机票</td><td>¥3,200 - 3,600</td></tr>
+    <tr><td>🏨 住宿 5 晚</td><td>¥1,900 - 3,500</td></tr>
+    <tr><td>🚄 高铁往返台中</td><td>¥800 - 1,000</td></tr>
+    <tr><td>🍽 餐饮 6 天</td><td>¥1,500 - 2,500</td></tr>
+    <tr><td>🎫 景点门票</td><td>¥300 - 500</td></tr>
+    <tr><td>🚇 市内交通</td><td>¥500 - 800</td></tr>
+    <tr class="total"><td>6天5晚 总预算</td><td>约 ¥8,200 — ¥11,900</td></tr>
+  </table></div>
+
+  <!-- 贴士 -->
+  <div class="sec-title"><span class="stamp">🎒 实用贴士</span><span class="line"></span></div>
+  <div class="tips">
+    <div class="tip"><b>📄 证件</b>需提前办理入台证，关注最新政策</div>
+    <div class="tip"><b>💳 交通卡</b>到桃园机场买一张悠游卡，捷运/巴士/便利店都能用</div>
+    <div class="tip"><b>🌦 天气</b>11月台北 18-25°C 偶有小雨，薄外套 + 折叠伞</div>
+    <div class="tip"><b>💰 支付</b>夜市小店多收现金，多换新台币；大商场可刷卡</div>
+    <div class="tip"><b>🗺 捷运</b>台北捷运发达，下载「台北捷运GO」APP</div>
+    <div class="tip"><b>🏫 淡江中学</b>需提前学校官网预约参观，出发前搞定！</div>
+  </div>
+
+  <!-- 尾声 -->
+  <div class="finale">
+    <div class="fq">💕「我想我会开始想念你，可是我刚刚才遇见了你。」</div>
+    <p>走过湘琴走过的路，吃过她吃过的小吃，<br>在这座城市里，遇见属于自己的恶作剧之吻。</p>
+    <div class="seal">Based on fly.ai · 实时数据</div>
+  </div>
+
+  <footer>航班及酒店价格可能随时变动 · 请以预订时实际价格为准</footer>
+</div>
+</body>
+</html>
