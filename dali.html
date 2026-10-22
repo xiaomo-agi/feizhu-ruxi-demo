@@ -3,109 +3,140 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🌿 跟着《去有风的地方》去大理 · 3天治愈手帐</title>
+<title>🌿 去有风的地方 · 大理3天 · 旅行日记</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
 <style>
 :root{
-  --paper:#f7f1e6; --ink:#3a3a3a; --navy:#2d5f52; --navy-deep:#1e463c;
-  --pink:#e8a08a; --pink-soft:#fdf3ee; --tape:#f0d9a8; --tape2:#d8e6c3;
-  --line:#d9cfbc; --gold:#c9a86a;
+  --kraft:#e5d8bd; --kraft-deep:#d8c8a5; --paper:#faf6ec; --ink:#4a4234;
+  --pine:#3d5a4c; --pine-deep:#2c443a; --clay:#b5651d; --leaf:#7a9471;
+  --rope:#a8845c; --line:#c9bb98;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'LXGW WenKai','PingFang SC',serif;background:var(--paper);color:var(--ink);line-height:1.8;font-size:16px;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E")}
-.wrap{max-width:700px;margin:0 auto;padding:28px 18px 80px}
-.cover{background:#fff;padding:16px 16px 20px;box-shadow:0 12px 40px rgba(45,95,82,.18);transform:rotate(-1.6deg);margin:20px 6px 10px;position:relative;animation:drop .8s cubic-bezier(.2,.9,.3,1.2) both}
-.cover .photo{background:linear-gradient(135deg,#2d5f52 0%,#52a08b 55%,#e8a08a 130%);height:190px;border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:20px}
-.cover .photo .kiss{font-size:15px;letter-spacing:.5em;opacity:.85;text-indent:.5em}
-.cover .photo h1{font-size:34px;margin:10px 0 6px;font-weight:700;letter-spacing:2px}
-.cover .photo .sub{font-size:14px;opacity:.9}
-.cover .caption{text-align:center;margin-top:14px;color:#6b6156;font-size:15px}
-.tape{position:absolute;width:96px;height:30px;background:var(--tape);opacity:.82;top:-13px;left:50%;transform:translateX(-50%) rotate(-3deg);box-shadow:0 2px 6px rgba(0,0,0,.12)}
-.meta-strip{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:22px 0 8px;animation:rise .7s .25s both}
-.meta-strip span{background:#fff;border:1.5px dashed var(--navy);border-radius:999px;padding:5px 16px;font-size:14px;color:var(--navy)}
-.toc{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:26px 0 34px;animation:rise .7s .4s both}
-.toc a{text-decoration:none;font-size:14px;padding:6px 14px;border-radius:6px;background:var(--pink-soft);color:#a5664e;border:1.5px solid #eccdbf;transition:all .25s}
-.toc a:hover{transform:rotate(-2deg) scale(1.06);background:var(--pink);color:#fff}
-.sec-title{display:flex;align-items:center;gap:14px;margin:52px 0 20px}
-.sec-title .stamp{background:var(--navy);color:#fff;padding:8px 18px;font-size:18px;border-radius:4px;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--pink)}
-.sec-title .line{flex:1;border-top:2px dashed var(--line)}
-.ticket{background:#fff;border-radius:14px;box-shadow:0 8px 26px rgba(30,70,60,.12);margin-bottom:18px;overflow:hidden;animation:rise .6s both}
-.ticket .t-head{background:var(--navy);color:#fff;padding:12px 20px;display:flex;justify-content:space-between;align-items:center}
-.ticket .t-head .tag{background:var(--pink);color:#fff;font-size:12px;padding:2px 10px;border-radius:999px;margin-right:8px}
+body{font-family:'LXGW WenKai','PingFang SC',serif;color:var(--ink);line-height:1.9;font-size:16px;
+  background:var(--kraft);
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(168,132,92,.12) 0, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(61,90,76,.08) 0, transparent 40%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E")}
+.wrap{max-width:700px;margin:0 auto;padding:26px 18px 80px}
+/* ---------- 封面：日记本扉页 ---------- */
+.cover{background:var(--paper);border:1px solid var(--kraft-deep);padding:34px 26px 30px;
+  margin:18px 4px 8px;position:relative;text-align:center;
+  box-shadow:0 10px 34px rgba(74,66,52,.22);animation:drop .8s both}
+.cover::before,.cover::after{content:'';position:absolute;top:14px;bottom:14px;width:5px;
+  background:repeating-linear-gradient(45deg,var(--rope),var(--rope) 6px,#8f6d49 6px,#8f6d49 12px)}
+.cover::before{left:12px}.cover::after{right:12px}
+.cover .eyebrow{letter-spacing:.55em;text-indent:.55em;font-size:13px;color:var(--leaf)}
+.cover h1{font-size:40px;color:var(--pine-deep);letter-spacing:8px;margin:12px 0 4px;font-weight:700}
+.cover .sub{font-size:14.5px;color:#8d7f65}
+.cover .route{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.cover .route span{border:1px solid var(--line);padding:3px 14px;font-size:13px;color:var(--pine);background:#fff}
+.stamp-round{position:absolute;right:22px;bottom:20px;width:74px;height:74px;border:2.5px double var(--clay);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--clay);
+  font-size:12px;line-height:1.4;transform:rotate(12deg);opacity:.85;text-align:center}
+/* ---------- 目录：绳结书签 ---------- */
+.toc{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:28px 0 40px;animation:rise .7s .3s both}
+.toc a{text-decoration:none;font-size:13.5px;padding:6px 16px;color:var(--pine);
+  border-bottom:2px solid var(--rope);background:rgba(255,255,255,.55);transition:all .25s}
+.toc a:hover{background:var(--pine);color:#fff;border-color:var(--pine)}
+/* ---------- 章节头 ---------- */
+.sec-title{display:flex;align-items:center;gap:0;margin:56px 0 22px}
+.sec-title .stamp{background:var(--pine);color:#f5efe0;padding:9px 22px;font-size:17px;position:relative}
+.sec-title .stamp::after{content:'';position:absolute;right:-7px;top:8px;bottom:8px;width:3px;
+  background:repeating-linear-gradient(180deg,var(--rope) 0 5px,transparent 5px 9px)}
+.sec-title .line{flex:1;border-top:2px solid var(--kraft-deep)}
+/* ---------- 票据卡 ---------- */
+.ticket{background:var(--paper);border:1px solid var(--kraft-deep);box-shadow:0 8px 24px rgba(74,66,52,.16);
+  margin-bottom:20px;overflow:hidden;animation:rise .6s both}
+.ticket .t-head{background:var(--pine);color:#f5efe0;padding:11px 20px;display:flex;justify-content:space-between;align-items:center;font-size:14.5px}
+.ticket .t-head .tag{border:1px solid #f5efe0;font-size:11.5px;padding:1px 10px;border-radius:2px;margin-right:8px;opacity:.9}
 .ticket .t-body{padding:16px 20px}
 .ticket table{width:100%;border-collapse:collapse;font-size:14px}
-.ticket th{color:#9a8f7d;font-weight:400;font-size:12.5px;text-align:left;border-bottom:1.5px dashed var(--line);padding:4px 6px}
-.ticket td{padding:8px 6px;border-bottom:1px solid #efe9dc}
-.ticket .rec{background:var(--pink-soft)}
-.ticket .t-tip{padding:10px 20px;font-size:13.5px;color:#7a7060;background:#fbf8f1}
-.stub{display:inline-block;margin:10px 20px 16px;text-decoration:none;background:var(--navy);color:#fff;padding:9px 22px;font-size:14.5px;border-radius:4px;position:relative;transition:all .25s;box-shadow:0 4px 12px rgba(45,95,82,.3)}
-.stub:hover{transform:translateY(-2px);background:var(--navy-deep)}
-.day-card{background:#fff;border-radius:4px;box-shadow:0 10px 30px rgba(30,70,60,.1);margin:30px 0;overflow:hidden;animation:rise .6s both}
-.day-card .d-head{display:flex;align-items:stretch}
-.day-card .d-num{background:var(--navy);color:#fff;min-width:96px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px 8px}
-.day-card .d-num b{font-size:34px;line-height:1;font-family:Georgia,serif}
-.day-card .d-num i{font-style:normal;font-size:12px;letter-spacing:3px;opacity:.75;margin-top:4px}
-.day-card .d-title{flex:1;padding:14px 18px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(90deg,#fff,#f3faf6)}
-.day-card .d-title h3{font-size:18.5px;color:var(--navy-deep)}
-.day-card .d-title small{color:#9a8f7d;font-size:13px}
-.d-body{padding:6px 20px 18px}
-.blk{padding:14px 4px;border-bottom:1px dashed #e8e0cf}
+.ticket th{color:#9c8d6d;font-weight:400;font-size:12.5px;text-align:left;border-bottom:1px dashed var(--line);padding:4px 6px}
+.ticket td{padding:9px 6px;border-bottom:1px dotted #e4d9bd}
+.ticket .rec{background:#f3ecdb}
+.ticket .t-tip{padding:10px 20px;font-size:13.5px;color:#7d7057;border-top:1px dashed var(--line)}
+.stub{display:inline-block;margin:12px 20px 18px;text-decoration:none;background:var(--clay);color:#fff;
+  padding:9px 24px;font-size:14px;border-radius:2px;box-shadow:2px 3px 0 var(--kraft-deep);transition:all .2s}
+.stub:hover{transform:translateY(-2px);box-shadow:2px 6px 0 var(--kraft-deep)}
+/* ---------- 日记页（Day 卡）---------- */
+.day-card{background:var(--paper);border:1px solid var(--kraft-deep);box-shadow:0 10px 30px rgba(74,66,52,.15);
+  margin:34px 0;position:relative;animation:rise .6s both}
+.day-card::before{content:'DAY';position:absolute;top:12px;right:16px;font-size:13px;letter-spacing:4px;color:var(--kraft-deep)}
+.d-head{display:flex;align-items:baseline;gap:14px;padding:22px 22px 10px;border-bottom:2px solid var(--kraft-deep)}
+.d-head .d-num{font-size:44px;color:var(--clay);font-family:Georgia,serif;font-weight:700;line-height:1}
+.d-head h3{font-size:19px;color:var(--pine-deep)}
+.d-head small{display:block;font-size:12.5px;color:#9c8d6d;margin-top:2px}
+.d-body{padding:4px 22px 20px;
+  background:repeating-linear-gradient(transparent 0, transparent 34px, rgba(201,187,152,.35) 34px, rgba(201,187,152,.35) 35px)}
+.blk{padding:16px 0 14px;border-bottom:1px dashed var(--line)}
 .blk:last-child{border-bottom:none}
-.blk .b-title{font-size:16.5px;color:var(--navy-deep);margin-bottom:6px}
-.blk p,.blk li{font-size:14.5px;color:#55503f}
+.blk .b-title{font-size:16.5px;color:var(--pine-deep);margin-bottom:6px}
+.blk p,.blk li{font-size:14.5px;color:#5d5442}
 .blk ul{padding-left:20px;margin:4px 0}
-.note{background:var(--pink-soft);border-left:4px solid var(--pink);border-radius:0 8px 8px 0;padding:10px 14px;margin:10px 0;font-size:13.5px;color:#8a5f4e}
-.warn{background:#fdf6e3;border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:10px 14px;margin:10px 0;font-size:13.5px;color:#8c7137}
-.quote{background:#fffaf7;border:1.5px solid #f2d2c6;border-radius:10px;padding:14px 16px 12px;margin:14px 0;position:relative;transform:rotate(-.6deg);box-shadow:2px 4px 10px rgba(232,160,138,.25);font-size:15.5px;color:#a5664e;text-align:center}
-.quote::before{content:'📌';position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-size:18px}
-.quote small{display:block;color:#c59a8b;font-size:12px;margin-top:5px}
-.nav{display:inline-block;font-size:12.5px;color:#fff;background:#7ba898;text-decoration:none;padding:2px 12px;border-radius:999px;margin-left:8px;vertical-align:2px;transition:all .2s}
-.nav:hover{background:var(--navy);transform:translateY(-1px)}
-.polaroid{background:#fff;padding:10px 10px 8px;margin:16px auto;width:88%;box-shadow:0 8px 22px rgba(30,70,60,.18);transform:rotate(-1.4deg)}
-.polaroid.rt{transform:rotate(1.3deg)}
-.polaroid img{width:100%;display:block;border-radius:2px;aspect-ratio:4/2.6;object-fit:cover;background:#eee}
-.polaroid .cap{text-align:center;font-size:13px;color:#8b8071;padding:7px 0 2px}
-.budget{background:linear-gradient(#fffdf6,#faf5e9);border:1.5px solid var(--line);border-radius:12px;padding:20px}
+.note{background:#f3ecdb;border-left:4px solid var(--leaf);padding:10px 14px;margin:10px 0;font-size:13.5px;color:#5c6b52}
+.warn{background:#f7ecd9;border:1px dashed var(--clay);padding:10px 14px;margin:10px 0;font-size:13.5px;color:#8a5320}
+/* 风的纸条（台词）*/
+.quote{background:#fffdf4;border:1px solid var(--kraft-deep);padding:16px 18px 12px;margin:16px 0;
+  position:relative;text-align:center;font-size:15.5px;color:var(--pine-deep);
+  box-shadow:3px 5px 12px rgba(74,66,52,.14);transform:rotate(-.8deg)}
+.quote::before{content:'🌿';position:absolute;top:-13px;left:22px;font-size:17px}
+.quote::after{content:'';position:absolute;top:-8px;left:0;right:0;height:16px;
+  background:linear-gradient(180deg,rgba(164,132,94,.0),rgba(164,132,92,.25));
+  -webkit-mask:radial-gradient(6px at 6px 0,transparent 98%,#000) -6px 0/12px 16px}
+.quote small{display:block;color:#a08c66;font-size:12px;margin-top:6px}
+/* 导航结 */
+.nav{display:inline-block;font-size:12px;color:var(--pine);border:1px solid var(--pine);
+  text-decoration:none;padding:1px 12px;border-radius:2px;margin-left:8px;vertical-align:2px;transition:all .2s;background:#fff}
+.nav:hover{background:var(--pine);color:#fff}
+/* 相片：麻绳吊着的照片 */
+.polaroid{background:#fff;padding:10px 10px 26px;margin:20px auto 8px;width:86%;position:relative;
+  box-shadow:0 8px 22px rgba(74,66,52,.24);transform:rotate(-1.6deg)}
+.polaroid.rt{transform:rotate(1.4deg)}
+.polaroid img{width:100%;display:block;aspect-ratio:4/2.7;object-fit:cover;background:#eee}
+.polaroid .cap{position:absolute;bottom:5px;left:0;right:0;text-align:center;font-size:12.5px;color:#8d7f65}
+.polaroid .pin{position:absolute;top:-9px;left:50%;transform:translateX(-50%);width:44px;height:18px;
+  border-top:2px solid var(--rope);border-radius:50% 50% 0 0/100% 100% 0 0}
+/* ---------- 账本 ---------- */
+.budget{background:var(--paper);border:1px solid var(--kraft-deep);padding:22px;box-shadow:0 8px 24px rgba(74,66,52,.14)}
 .budget table{width:100%;border-collapse:collapse;font-size:14.5px}
-.budget td{padding:7px 4px;border-bottom:1px dashed #e5dcc8}
-.budget td:last-child{text-align:right;color:#7a6c4d}
-.budget .total{font-size:16px;color:var(--navy);font-weight:700;border-bottom:none;padding-top:12px}
-.tips{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
-.tip{background:var(--tape2);border-radius:2px;padding:14px 16px;font-size:13.5px;box-shadow:3px 4px 10px rgba(0,0,0,.1);transform:rotate(-.8deg);color:#4e5c42}
-.tip:nth-child(even){transform:rotate(.9deg);background:#fdeecb}
-.tip b{color:#3e4a35;display:block;margin-bottom:3px;font-size:14.5px}
-.finale{margin-top:56px;text-align:center;padding:36px 20px;background:#fff;border-radius:14px;box-shadow:0 12px 36px rgba(45,95,82,.12);transform:rotate(.5deg)}
-.finale .fq{font-size:18px;color:var(--navy);margin-bottom:10px}
-.finale p{color:#8a8172;font-size:14.5px}
-.seal{display:inline-block;margin-top:20px;border:2.5px solid #c96b6b;color:#c96b6b;border-radius:8px;padding:6px 14px;font-size:13px;transform:rotate(-4deg);letter-spacing:1px;opacity:.85}
-footer{margin-top:36px;text-align:center;font-size:12.5px;color:#a89c86}
-@keyframes drop{from{opacity:0;transform:translateY(-40px) rotate(-5deg)}to{opacity:1;transform:translateY(0) rotate(-1.6deg)}}
-@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:520px){.cover .photo h1{font-size:26px}.day-card .d-num{min-width:74px}.day-card .d-num b{font-size:26px}}
+.budget td{padding:8px 4px;border-bottom:1px dashed var(--line)}
+.budget td:last-child{text-align:right;color:#7d6c48}
+.budget .total{font-size:16px;color:var(--pine-deep);font-weight:700;border-bottom:none;padding-top:12px}
+/* ---------- 贴士 ---------- */
+.tips{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.tip{background:#f3ecdb;border:1px solid var(--kraft-deep);padding:14px 16px;font-size:13.5px;color:#5d5442;transform:rotate(-.6deg)}
+.tip:nth-child(even){transform:rotate(.7deg)}
+.tip b{color:var(--pine-deep);display:block;margin-bottom:3px;font-size:14.5px}
+/* ---------- 尾声 ---------- */
+.finale{margin-top:60px;text-align:center;padding:40px 22px;background:var(--paper);
+  border:1px solid var(--kraft-deep);box-shadow:0 12px 36px rgba(74,66,52,.18)}
+.finale .fq{font-size:19px;color:var(--pine-deep);margin-bottom:10px}
+.finale p{color:#8d7f65;font-size:14.5px}
+.seal{display:inline-block;margin-top:22px;border:2.5px double var(--pine);color:var(--pine);
+  padding:6px 16px;font-size:12.5px;transform:rotate(-3deg);letter-spacing:2px}
+footer{margin-top:38px;text-align:center;font-size:12.5px;color:#a3936f}
+@keyframes drop{from{opacity:0;transform:translateY(-36px)}to{opacity:1;transform:translateY(0)}}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:520px){.cover h1{font-size:30px;letter-spacing:5px}.d-head .d-num{font-size:34px}}
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <div class="cover">
-    <div class="tape"></div>
-    <div class="photo">
-      <div class="kiss">MEET YOURSELF</div>
-      <h1>去有风的地方</h1>
-      <div class="sub">跟着许红豆的脚步 · 大理 3 天治愈之旅</div>
-    </div>
-    <div class="caption">一场把自己交给风的旅行<br>📍 杭州出发 · 🏔 古城 · 🌾 凤阳邑 · 🌊 双廊洱海</div>
-  </div>
-  <div class="meta-strip">
-    <span>📅 11.20 — 11.22</span><span>✈️ 杭州 ⇄ 大理</span><span>🎬 有风小院·凤阳邑</span>
+    <div class="eyebrow">A TRAVEL JOURNAL · 慢一点</div>
+    <h1>去有风的地方</h1>
+    <div class="sub">跟着许红豆的脚步 · 大理三天治愈之旅</div>
+    <div class="route"><span>✈️ 杭州 → 大理</span><span>🏔 古城</span><span>🌾 凤阳邑</span><span>🌊 双廊洱海</span><span>📅 11.20–11.22</span></div>
+    <div class="stamp-round">大理·凤阳邑<br>风之印</div>
   </div>
 
   <nav class="toc">
     <a href="#flights">✈️ 航班</a><a href="#hotel">🏡 民宿</a>
-    <a href="#day1">D1 古城慢时光</a><a href="#day2">D2 凤阳邑·有风小院</a>
-    <a href="#day3">D3 双廊洱海</a><a href="#budget">💰 预算</a>
+    <a href="#day1">一 · 古城慢时光</a><a href="#day2">二 · 凤阳邑·有风小院</a>
+    <a href="#day3">三 · 双廊洱海</a><a href="#budget">💰 账本</a>
   </nav>
 
   <div class="sec-title" id="flights"><span class="stamp">✈️ 往返机票</span><span class="line"></span></div>
@@ -120,10 +151,10 @@ footer{margin-top:36px;text-align:center;font-size:12.5px;color:#a89c86}
   </div>
   <div class="ticket">
     <div class="t-head"><span><span class="tag">返程</span>11.22 周日</span><span>大理 → 杭州</span></div>
-    <div class="t-tip">⚠️ 返程航班建议选下午/晚间班次，出发前在飞猪搜「大理→杭州 11月22日」锁定实时价格（D3 双廊返程约 1.5 小时车程，留足时间）。</div>
+    <div class="t-tip">⚠️ 返程建议选下午/晚间班次，出发前在飞猪搜「大理→杭州 11月22日」锁定实时价格（双廊返程约 1.5 小时车程，留足时间）。</div>
   </div>
 
-  <div class="sec-title" id="hotel"><span class="stamp">🏡 精选民宿 · 2晚</span><span class="line"></span></div>
+  <div class="sec-title" id="hotel"><span class="stamp">🏡 精选民宿 · 两晚</span><span class="line"></span></div>
   <div class="ticket">
     <div class="t-head"><span>六家全档位</span><span>¥80 – ¥195/晚</span></div>
     <div class="t-body"><table>
@@ -142,14 +173,14 @@ footer{margin-top:36px;text-align:center;font-size:12.5px;color:#a89c86}
   </div>
 
   <div class="day-card" id="day1">
-    <div class="d-head"><div class="d-num"><b>01</b><i>DAY</i></div>
-      <div class="d-title"><h3>抵达 · 大理古城慢时光</h3><small>11月20日 周五 · 先把自己安顿好</small></div></div>
+    <div class="d-head"><div class="d-num">壹</div>
+      <div><h3>抵达 · 大理古城慢时光</h3><small>11月20日 周五 · 先把自己安顿好</small></div></div>
     <div class="d-body">
       <div class="blk"><div class="b-title"><span class="emo">🌅</span>上午 · 抵达大理<a class="nav" href="https://uri.amap.com/marker?position=100.1640,25.6948&name=大理古城" target="_blank">📍导航古城</a></div>
         <ul><li>10:50 抵达凤仪机场，打车/民宿接机约 30 分钟进古城</li><li>入住民宿，放下行李，稍作休整——别急着赶行程</li></ul></div>
       <div class="blk"><div class="b-title"><span class="emo">🍜</span>中午 · 古城觅食</div>
         <ul><li>复兴路、人民路小吃街：饵丝 · 凉鸡米线 · 乳扇</li></ul>
-        <div class="polaroid rt"><img src="https://img.alicdn.com/imgextra/i3/6000000005294/O1CN01sfZMkE1oyhuaerv2Y_!!6000000005294-2-hotel.png" alt="大理古城民宿庭院"><div class="cap">D1 · 住在古城里，推门就是风花雪月 🏔</div></div></div>
+        <div class="polaroid rt"><div class="pin"></div><img src="https://img.alicdn.com/imgextra/i3/6000000005294/O1CN01sfZMkE1oyhuaerv2Y_!!6000000005294-2-hotel.png" alt="大理古城民宿庭院"><div class="cap">D1 · 住在古城里，推门就是风花雪月 🏔</div></div></div>
       <div class="blk"><div class="b-title"><span class="emo">🏛</span>下午 · 古城漫游</div>
         <ul>
           <li><b>五华楼</b><a class="nav" href="https://uri.amap.com/marker?position=100.1635,25.6960&name=五华楼" target="_blank">📍导航</a> 登楼远眺苍山洱海，古城全景</li>
@@ -158,15 +189,15 @@ footer{margin-top:36px;text-align:center;font-size:12.5px;color:#a89c86}
       <div class="blk"><div class="b-title"><span class="emo">🌅</span>傍晚 · 洱海看日落</div>
         <ul><li><b>才村码头</b><a class="nav" href="https://uri.amap.com/marker?position=100.1916,25.7180&name=才村码头" target="_blank">📍导航</a> 距古城最近的洱海边，日落绝佳位</li>
         <li>🌅 11月日落约 18:00，建议 17:30 到位占机位</li></ul>
-        <div class="quote">「有时候，我们需要的不是逃离生活，而是让生活找到我们。」<small>—— D1，卸下疲惫的第一天</small></div></div>
+        <div class="quote">「有时候，我们需要的不是逃离生活，而是让生活找到我们。」<small>—— 第一天，卸下疲惫</small></div></div>
       <div class="blk"><div class="b-title"><span class="emo">🍽</span>晚上 · 古城夜生活</div>
         <ul><li>白族餐厅：酸辣鱼 · 砂锅鱼；饭后酒吧街走走</li></ul></div>
     </div>
   </div>
 
   <div class="day-card" id="day2">
-    <div class="d-head"><div class="d-num"><b>02</b><i>DAY</i></div>
-      <div class="d-title"><h3>凤阳邑村 · 有风小院打卡</h3><small>11月21日 周六 · 🎬 今日重点：核心取景地</small></div></div>
+    <div class="d-head"><div class="d-num">贰</div>
+      <div><h3>凤阳邑村 · 有风小院打卡</h3><small>11月21日 周六 · 🎬 今日重点：核心取景地</small></div></div>
     <div class="d-body">
       <div class="blk"><div class="b-title"><span class="emo">🌅</span>上午 · 凤阳邑村</div>
         <ul>
@@ -182,15 +213,15 @@ footer{margin-top:36px;text-align:center;font-size:12.5px;color:#a89c86}
           <li><b>喜洲古镇</b><a class="nav" href="https://uri.amap.com/marker?position=100.1316,25.8530&name=喜洲古镇" target="_blank">📍导航</a> 白族民居建筑群博物馆，明清楚建筑保存完好</li>
           <li><b>严家大院</b><a class="nav" href="https://uri.amap.com/marker?position=100.1320,25.8535&name=严家大院" target="_blank">📍导航</a> 「三坊一照壁 · 四合五天井」格局</li>
           <li>🌾 11 月稻田金黄，田园拍照超美；🍘 喜洲粑粑甜咸各来一个</li></ul>
-        <div class="polaroid"><img src="https://img.alicdn.com/imgextra/i2/6000000002703/O1CN01Z6b6201Vq1hoZoHxk_!!6000000002703-2-hotel.png" alt="喜洲田园民宿"><div class="cap">D2 · 喜洲的田野，11 月正好金黄 🌾</div></div></div>
+        <div class="polaroid"><div class="pin"></div><img src="https://img.alicdn.com/imgextra/i2/6000000002703/O1CN01Z6b6201Vq1hoZoHxk_!!6000000002703-2-hotel.png" alt="喜洲田园民宿"><div class="cap">D2 · 喜洲的田野，11 月正好金黄 🌾</div></div></div>
       <div class="blk"><div class="b-title"><span class="emo">🌅</span>傍晚 · 返回古城</div>
         <ul><li>喜洲→古城约 30 分钟；晚餐换一家风格，夜里古城继续闲逛</li></ul></div>
     </div>
   </div>
 
   <div class="day-card" id="day3">
-    <div class="d-head"><div class="d-num"><b>03</b><i>DAY</i></div>
-      <div class="d-title"><h3>双廊洱海 · 返程</h3><small>11月22日 周日 · 把洱海装进相册再走</small></div></div>
+    <div class="d-head"><div class="d-num">叁</div>
+      <div><h3>双廊洱海 · 返程</h3><small>11月22日 周日 · 把洱海装进相册再走</small></div></div>
     <div class="d-body">
       <div class="blk"><div class="b-title"><span class="emo">🌅</span>上午 · 双廊古镇</div>
         <ul>
@@ -200,27 +231,27 @@ footer{margin-top:36px;text-align:center;font-size:12.5px;color:#a89c86}
           <li>📸 洱海边拍照圣地：苍山洱海同框</li></ul></div>
       <div class="blk"><div class="b-title"><span class="emo">🍜</span>中午 · 双廊临海午餐</div>
         <ul><li>边看洱海边吃：酸辣鱼 · 银鱼煎蛋 · 海菜花</li></ul>
-        <div class="quote">「风花雪月的大理，会把所有的烦恼都吹散。」<small>—— D3，把风带回家</small></div></div>
+        <div class="quote">「风花雪月的大理，会把所有的烦恼都吹散。」<small>—— 第叁天，把风带回家</small></div></div>
       <div class="blk"><div class="b-title"><span class="emo">🚗</span>下午 · 返程</div>
         <ul><li>双廊→凤仪机场约 1.5 小时，提前 2 小时到机场</li><li>选下午/晚间航班回杭州</li></ul></div>
     </div>
   </div>
 
-  <div class="sec-title" id="budget"><span class="stamp">💰 预算账本</span><span class="line"></span></div>
+  <div class="sec-title" id="budget"><span class="stamp">💰 旅行账本</span><span class="line"></span></div>
   <div class="budget"><table>
     <tr><td>✈️ 往返机票</td><td>¥2,200 - 2,800</td></tr>
-    <tr><td>🏡 住宿 2 晚（民宿）</td><td>¥160 - 400</td></tr>
-    <tr><td>🍽 餐饮 3 天</td><td>¥300 - 500</td></tr>
+    <tr><td>🏡 住宿两晚（民宿）</td><td>¥160 - 400</td></tr>
+    <tr><td>🍽 餐饮三天</td><td>¥300 - 500</td></tr>
     <tr><td>🚕 交通（打车/包车）</td><td>¥300 - 500</td></tr>
     <tr><td>🎫 门票及其他</td><td>¥100 - 200</td></tr>
-    <tr class="total"><td>3 天治愈之旅 总预算</td><td>约 ¥3,060 — ¥4,400</td></tr>
+    <tr class="total"><td>三天治愈之旅 · 总预算</td><td>约 ¥3,060 — ¥4,400</td></tr>
   </table></div>
 
-  <div class="sec-title"><span class="stamp">🎒 实用贴士</span><span class="line"></span></div>
+  <div class="sec-title"><span class="stamp">🎒 行囊贴士</span><span class="line"></span></div>
   <div class="tips">
     <div class="tip"><b>🌦 天气</b>11月白天 15-20°C，早晚 5-10°C，薄外套+防晒</div>
     <div class="tip"><b>🚕 交通</b>古城内步行；凤阳邑约20分钟/喜洲30分钟/双廊1小时</div>
-    <div class="tip"><b>🗺 导航</b>每个点位点「📍导航」直达高德地图，可直接步行/驾车导航</div>
+    <div class="tip"><b>🗺 导航</b>每个点位点「📍导航」直达高德地图，步行/驾车直接开走</div>
     <div class="tip"><b>📸 拍照</b>凤阳邑茶马古道 · 喜洲田园 · 双廊洱海，三大出片区</div>
   </div>
 
