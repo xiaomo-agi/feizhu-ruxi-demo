@@ -133,7 +133,8 @@ footer{margin-top:36px;text-align:center;font-size:12.5px;color:#a89c86}
 .nav{display:inline-block;font-size:12.5px;color:#fff;background:#5b77b0;text-decoration:none;
   padding:2px 12px;border-radius:999px;margin-left:8px;vertical-align:2px;transition:all .2s}
 .nav:hover{background:var(--navy);transform:translateY(-1px)}
-.food img{width:100%;height:88px;object-fit:cover;border-radius:6px 6px 0 0;margin:-14px -14px 8px -14px;width:calc(100% + 28px)}
+.food .fic{width:72px;height:72px;margin:2px auto 8px;background:var(--pink-soft);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.food .fic svg{width:52px;height:52px}
 /* 拍立得相框 */
 .polaroid{background:#fff;padding:10px 10px 8px;margin:16px auto;width:88%;
   box-shadow:0 8px 22px rgba(31,42,73,.18);transform:rotate(-1.4deg)}
@@ -360,18 +361,18 @@ footer{margin-top:36px;text-align:center;font-size:12.5px;color:#a89c86}
   <!-- 小吃 -->
   <div class="sec-title" id="food"><span class="stamp">🍽 必吃清单</span><span class="line"></span></div>
   <div class="food-grid">
-  <div class="food"><img src="https://img.alicdn.com/imgextra/i4/6000000005874/O1CN01cb8sjmsDwQC1chua_!!6000000005874-0-itemdesc.jpg" alt="🥘 蚵仔煎"><b>🥘 蚵仔煎</b><span>各夜市 · 湘琴同款！</span></div>
-  <div class="food"><img src="https://img.alicdn.com/imgextra/i5/6000000000385/O1CN0132rvHgifJOF2vH2e_!!6000000000385-0-itemdesc.jpg" alt="🍜 牛肉面"><b>🍜 牛肉面</b><span>林东芳 / 永康</span></div>
-  <div class="food"><img src="https://img.alicdn.com/imgextra/i4/6000000007279/O1CN01ZNmBe1UBxGG1chua_!!6000000007279-0-itemdesc.jpg" alt="🍚 卤肉饭"><b>🍚 卤肉饭</b><span>金峰 · 家常味天花板</span></div>
-  <div class="food"><img src="https://img.alicdn.com/imgextra/i3/6000000006323/O1CN01S0tAwbszHAC1chua_!!6000000006323-2-itemdesc.png" alt="🧋 珍珠奶茶"><b>🧋 珍珠奶茶</b><span>春水堂台中本店 · 发源地</span></div>
-  <div class="food"><img src="https://img.alicdn.com/imgextra/i2/2216047494380/O1CN019wxD8d1iE5lnrFdJf_!!2216047494380.jpg" alt="🍢 大肠包小肠"><b>🍢 大肠包小肠</b><span>各夜市 · 台式热狗</span></div>
-  <div class="food"><img src="https://img.alicdn.com/imgextra/i4/2213743027/O1CN019hXpVib788B1chua_!!2413743027.jpg" alt="🍡 芋圆"><b>🍡 芋圆</b><span>九份赖阿婆</span></div>
-  <div class="food"><img src="https://img.alicdn.com/imgextra/i4/6000000002697/O1CN01VLDlk50F6XG1chua_!!6000000002697-0-itemdesc.jpg" alt="🥚 铁蛋"><b>🥚 铁蛋</b><span>淡水老街特产</span></div>
-  <div class="food"><img src="https://img.alicdn.com/imgextra/i2/6000000003106/O1CN01m2y7SO1YobKBILkSE_!!6000000003106-0-itemdesc.jpg" alt="🧈 太阳饼"><b>🧈 太阳饼</b><span>台中 · 伴手礼首选</span></div>
-  <div class="food"><img src="https://img.alicdn.com/imgextra/i3/6000000003254/O1CN01Gmg2K11ZuNe8yZzjO_!!6000000003254-0-fliggyimage.jpg" alt="🍢 阿给"><b>🍢 阿给</b><span>淡江中学旁 · 淡水特有</span></div>
-  <div class="food"><img src="https://img.alicdn.com/imgextra/i4/6000000005306/O1CN0189d9pTF5stJ1chua_!!6000000005306-0-itemdesc.jpg" alt="🍧 芒果雪花冰"><b>🍧 芒果雪花冰</b><span>宫原眼科 · 甜品控必去</span></div>
-  <div class="food"><img src="https://img.alicdn.com/imgextra/i1/6000000005894/O1CN01rnz0cpEPjTB1chua_!!6000000005894-0-itemdesc.jpg" alt="🍗 盐酥鸡"><b>🍗 盐酥鸡</b><span>各夜市 · 台湾版炸鸡</span></div>
-  <div class="food"><img src="https://img.alicdn.com/imgextra/i3/2220815971761/O1CN01hs2UCB1OsaZKRDlQt_!!2220815971761.png" alt="🥟 割包"><b>🥟 割包</b><span>宁夏夜市 · 台式汉堡</span></div>
+    <div class="food"><div class="fic"><svg viewBox="0 0 64 64" fill="none" stroke="#a5566e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="32" cy="36" rx="22" ry="14"/><path d="M14 36c4-3 8 2 12-1s8 3 12 0 6 2 12-1"/><circle cx="26" cy="34" r="2.2" fill="#a5566e" stroke="none"/><circle cx="36" cy="38" r="2.2" fill="#a5566e" stroke="none"/><circle cx="42" cy="33" r="2.2" fill="#a5566e" stroke="none"/></svg></div><b>🥘 蚵仔煎</b><span>各夜市 · 湘琴同款！</span></div>
+    <div class="food"><div class="fic"><svg viewBox="0 0 64 64" fill="none" stroke="#a5566e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 34h40l-4 14a6 6 0 0 1-6 5H22a6 6 0 0 1-6-5z"/><path d="M20 28c3-4 6 2 9-2s6 3 9-1"/><path d="M50 12l6 10M56 12l-6 10"/></svg></div><b>🍜 牛肉面</b><span>林东芳 / 永康</span></div>
+    <div class="food"><div class="fic"><svg viewBox="0 0 64 64" fill="none" stroke="#a5566e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 34h40l-4 14a6 6 0 0 1-6 5H22a6 6 0 0 1-6-5z"/><path d="M18 34c4-8 10-10 14-10s10 2 14 10"/><circle cx="27" cy="30" r="1.8" fill="#a5566e" stroke="none"/><circle cx="35" cy="32" r="1.8" fill="#a5566e" stroke="none"/></svg></div><b>🍚 卤肉饭</b><span>金峰 · 家常味天花板</span></div>
+    <div class="food"><div class="fic"><svg viewBox="0 0 64 64" fill="none" stroke="#a5566e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 18h28l-3 34a5 5 0 0 1-5 5H26a5 5 0 0 1-5-5z"/><path d="M34 6l6 12"/><circle cx="26" cy="48" r="2.4" fill="#a5566e" stroke="none"/><circle cx="34" cy="50" r="2.4" fill="#a5566e" stroke="none"/><circle cx="40" cy="47" r="2.4" fill="#a5566e" stroke="none"/></svg></div><b>🧋 珍珠奶茶</b><span>春水堂台中本店 · 发源地</span></div>
+    <div class="food"><div class="fic"><svg viewBox="0 0 64 64" fill="none" stroke="#a5566e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="24" width="20" height="8" rx="4"/><rect x="26" y="36" width="28" height="8" rx="4"/><path d="M30 32l4 4"/></svg></div><b>🍢 大肠包小肠</b><span>各夜市 · 台式热狗</span></div>
+    <div class="food"><div class="fic"><svg viewBox="0 0 64 64" fill="none" stroke="#a5566e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34h36l-3 12a6 6 0 0 1-6 5H23a6 6 0 0 1-6-5z"/><circle cx="24" cy="31" r="3"/><circle cx="32" cy="29" r="3"/><circle cx="40" cy="31" r="3"/><circle cx="36" cy="24" r="3"/></svg></div><b>🍡 芋圆</b><span>九份赖阿婆</span></div>
+    <div class="food"><div class="fic"><svg viewBox="0 0 64 64" fill="none" stroke="#a5566e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 22c0-8 6-13 14-13s14 5 14 13c0 12-8 24-14 28-6-4-14-16-14-28z"/><circle cx="27" cy="22" r="1.8" fill="#a5566e" stroke="none"/><circle cx="37" cy="24" r="1.8" fill="#a5566e" stroke="none"/><circle cx="32" cy="32" r="1.8" fill="#a5566e" stroke="none"/></svg></div><b>🥚 铁蛋</b><span>淡水老街特产</span></div>
+    <div class="food"><div class="fic"><svg viewBox="0 0 64 64" fill="none" stroke="#a5566e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="32" r="16"/><circle cx="32" cy="32" r="7"/><path d="M32 8v6M32 50v6M8 32h6M50 32h6M15 15l4 4M45 45l4 4M49 15l-4 4M19 45l-4 4"/></svg></div><b>🧈 太阳饼</b><span>台中 · 伴手礼首选</span></div>
+    <div class="food"><div class="fic"><svg viewBox="0 0 64 64" fill="none" stroke="#a5566e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="20" width="36" height="26" rx="4"/><path d="M14 30c6-5 10 4 18-1s12 3 18-1"/><path d="M26 46v6M38 46v6"/></svg></div><b>🍢 阿给</b><span>淡江中学旁 · 淡水特有</span></div>
+    <div class="food"><div class="fic"><svg viewBox="0 0 64 64" fill="none" stroke="#a5566e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 36h40l-4 12a6 6 0 0 1-6 5H22a6 6 0 0 1-6-5z"/><path d="M16 36c2-10 8-16 16-16s14 6 16 16"/><path d="M28 22l3 5M36 24l-2 5"/></svg></div><b>🍧 芒果冰</b><span>宫原眼科 · 甜品控必去</span></div>
+    <div class="food"><div class="fic"><svg viewBox="0 0 64 64" fill="none" stroke="#a5566e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 22l4-10h20l4 10"/><path d="M16 22h32l-3 26a5 5 0 0 1-5 5H24a5 5 0 0 1-5-5z"/><rect x="26" y="30" width="7" height="6" rx="1.5"/><rect x="36" y="34" width="6" height="5" rx="1.5"/></svg></div><b>🍗 盐酥鸡</b><span>各夜市 · 台湾版炸鸡</span></div>
+    <div class="food"><div class="fic"><svg viewBox="0 0 64 64" fill="none" stroke="#a5566e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 40c0-12 8-20 18-20s18 8 18 20z"/><path d="M14 40h36v6a6 6 0 0 1-6 6H20a6 6 0 0 1-6-6z"/><path d="M22 46c4-3 16-3 20 0"/></svg></div><b>🥟 割包</b><span>宁夏夜市 · 台式汉堡</span></div>
   </div>
 
   <!-- 预算 -->
