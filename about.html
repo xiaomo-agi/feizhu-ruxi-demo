@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>入戏 · 产品讲解</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css">
+<style>
+:root{--paper:#f7f1e6;--navy:#2c3a63;--navy-deep:#1f2a49;--pink:#e89bb0;--pink-soft:#fdf0f3;
+  --tape:#f0d9a8;--line:#d9cfbc;--gold:#c9a86a;--green:#52a08b;--green-deep:#2d5f52}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'LXGW WenKai','PingFang SC',serif;background:var(--paper);color:#3a3a3a;line-height:1.85;font-size:16px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E")}
+.wrap{max-width:760px;margin:0 auto;padding:30px 18px 90px}
+header{text-align:center;margin:10px 0 8px;animation:rise .7s both}
+header h1{font-size:38px;color:var(--navy);letter-spacing:8px}
+header .sub{color:#8a8172;font-size:15px;margin-top:4px}
+header .one{display:inline-block;margin-top:16px;background:#fff;border:1.5px dashed var(--navy);border-radius:999px;padding:6px 22px;font-size:14px;color:var(--navy)}
+.demo-links{display:flex;gap:14px;justify-content:center;margin:26px 0 10px;flex-wrap:wrap;animation:rise .7s .15s both}
+.demo-links a{text-decoration:none;background:var(--navy);color:#fff;padding:9px 20px;border-radius:6px;font-size:14px;box-shadow:0 5px 14px rgba(44,58,99,.3);transition:all .25s}
+.demo-links a.alt{background:var(--green-deep)}
+.demo-links a:hover{transform:translateY(-2px)}
+/* 章节 */
+.sec{background:#fff;border-radius:6px;box-shadow:0 10px 30px rgba(31,42,73,.1);padding:26px 26px 22px;margin:30px 0;position:relative;animation:rise .6s both}
+.sec h2{font-size:20px;color:var(--navy-deep);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.sec h2 .chip{background:var(--pink);color:#fff;font-size:12px;padding:2px 10px;border-radius:999px;letter-spacing:1px}
+.sec p{font-size:15px;color:#55503f;margin-bottom:10px}
+.sec b{color:var(--navy-deep)}
+/* 痛点对照 */
+.pain{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+.pain>div{border-radius:8px;padding:14px;font-size:13.5px;line-height:1.8}
+.pain .before{background:#faf1ec;border:1.5px dashed #d8a08c;color:#8a5b48}
+.pain .after{background:#eef6f2;border:1.5px dashed #7fae9d;color:#3e6355}
+.pain .before b,.pain .after b{display:block;font-size:14.5px;margin-bottom:6px}
+.pain .before b{color:#b06a52}.pain .after b{color:var(--green-deep)}
+/* 闭环图 */
+.loop{background:var(--pink-soft);border-radius:10px;padding:20px 18px;margin:14px 0;border:1.5px solid #f2ccd8}
+.loop .steps{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;margin-bottom:10px}
+.loop .step{background:#fff;border:1.5px solid var(--pink);border-radius:8px;padding:8px 14px;font-size:13.5px;color:#a5566e;text-align:center;line-height:1.5}
+.loop .arrow{color:var(--pink);font-size:16px;font-weight:700}
+.loop .fly{margin-top:10px;text-align:center;font-size:13.5px;color:#8a5568;background:#fff;border-radius:8px;padding:8px}
+/* 三件套 */
+.trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:14px 0}
+.trio>div{background:var(--paper);border:1.5px solid var(--line);border-radius:10px;padding:16px 14px;text-align:center}
+.trio .ic{font-size:30px}
+.trio b{display:block;color:var(--navy-deep);margin:6px 0 4px;font-size:15.5px}
+.trio span{font-size:13px;color:#8a8172}
+/* 商业价值 */
+.biz .row{display:flex;gap:12px;margin:12px 0;align-items:flex-start}
+.biz .num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;margin-top:2px}
+.biz .row p{margin:0;font-size:14.5px}
+/* 演进 */
+.evo{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.evo span{background:#fff;border:1.5px dashed var(--gold);border-radius:999px;padding:5px 16px;font-size:13.5px;color:#8c7137}
+/* 复现 */
+.repro ol{margin:10px 0 6px 22px}
+.repro li{font-size:14.5px;color:#55503f;margin-bottom:8px}
+.repro code{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:1px 8px;font-size:13px;color:var(--navy-deep)}
+.note{background:var(--pink-soft);border-left:4px solid var(--pink);border-radius:0 8px 8px 0;padding:12px 16px;margin:12px 0;font-size:14px;color:#8a5568}
+.note.green{background:#eef6f2;border-left-color:var(--green);color:#3e6355}
+footer{text-align:center;font-size:12.5px;color:#a89c86;margin-top:40px}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:560px){.pain{grid-template-columns:1fr}.wrap{padding:20px 12px 70px}.sec{padding:20px 16px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>入 戏</h1>
+  <div class="sub">跟着剧情去旅行 · 产品讲解页</div>
+  <div class="one">说一部剧 + 出发城市 + 几天 → 可导航 · 可预订 · 可发帖的打卡手帐</div>
+  <div class="demo-links">
+    <a href="kiss.html">💕 恶作剧之吻 · 台湾6天</a>
+    <a href="dali.html" class="alt">🌿 去有风的地方 · 大理3天</a>
+  </div>
+</header>
+
+<!-- ① 这个功能有什么用 -->
+<div class="sec">
+  <h2><span class="chip">壹</span>它解决什么问题</h2>
+  <p>剧迷「圣地巡礼」这件事<b>早就发生了</b>：去剧里的地方、站上那个机位、拍同款、配那句台词发朋友圈。小红书/抖音上全是这类打卡帖，各地文旅局也在下场做官方线路（大理文旅《去有风》同款线路、长春电影节《人世间》打卡线）。</p>
+  <div class="pain">
+    <div class="before"><b>😩 现在的用户要自己拼</b>散落几十篇帖子里搜定位 · 一个一个核对坐标 · 攻略只管「去哪」——怎么去/住哪/门票多少没人管 · 机位和台词全靠自己截图回忆</div>
+    <div class="after"><b>😊 入戏一句话打包</b>说「恶作剧 台湾 6天」→ 逐日动线 + 每个点位导航直达 + 机票民宿实时可订 + 机位/台词/复刻姿势三件套——发帖素材直接配齐</div>
+  </div>
+  <div class="trio">
+    <div><div class="ic">📍</div><b>导航链接</b><span>高德 URI，点开即走，永不失效</span></div>
+    <div><div class="ic">🎬</div><b>机位与复刻姿势</b><span>站哪、什么光、怎么摆同款动作</span></div>
+    <div><div class="ic">💬</div><b>台词彩蛋</b><span>配图金句直接抄，锚点型/状态型分好类</span></div>
+  </div>
+  <p style="font-size:13.5px;color:#8a8172;margin-top:4px">三件套 = 用户发一条小红书帖需要的全部素材。</p>
+</div>
+
+<!-- ② 怎么跑起来的 -->
+<div class="sec">
+  <h2><span class="chip">贰</span>它是怎么跑起来的</h2>
+  <div class="loop">
+    <div class="steps">
+      <div class="step">用户一句话<br><b>剧名+城市+天数</b></div><span class="arrow">→</span>
+      <div class="step">剧知识库<br><b>点位/机位/台词</b></div><span class="arrow">+</span>
+      <div class="step">flyai 实时库存<br><b>机票/民宿/门票</b></div><span class="arrow">+</span>
+      <div class="step">高德 URI<br><b>导航/觅食链接</b></div><span class="arrow">→</span>
+      <div class="step">打卡手帐<br><b>可导航可预订可发帖</b></div>
+    </div>
+    <div class="fly">🔁 用户拿着三件套发的打卡笔记 → 又成为下一批剧粉的种草源 → <b>UGC 飞轮</b></div>
+  </div>
+  <div class="note green">产品形态说明：本页展示的手帐 HTML 是<b>效果上限的展示形态</b>——渲染层是可替换的。实际使用中，用户不需要收到一个 HTML：一页文档、一张卡片、一条带按钮的消息同样成立。大脑（智能体）不变，皮按场景换。</div>
+</div>
+
+<!-- ③ 商业价值 -->
+<div class="sec biz">
+  <h2><span class="chip">叁</span>为什么说它有商业价值</h2>
+  <div class="row"><div class="num">1</div><p><b>需求被双重验证过</b>：民间自发打卡行为（小红书/抖音海量内容）+ 官方下场（文旅局官方打卡线路）——不是猜的需求。</p></div>
+  <div class="row"><div class="num">2</div><p><b>流量供给是持续的</b>：每部热播剧/电影/综艺都是一波新入口。经典剧是长尾（人世间/恶吻的打卡流延续数年），热播剧是波峰——产品追着内容档期走，天然自带运营节奏。</p></div>
+  <div class="row"><div class="num">3</div><p><b>实现极轻，边际成本递减</b>：核心三件套=知识库+flyai skill+高德 URI。点位扩充来自内容平台的公开打卡帖（小红书/抖音本身就是民间知识库），AI 调研整理+人工核验即可入库——新增一部剧的成本，远低于新增一部剧带来的流量。</p></div>
+  <div class="row"><div class="num">4</div><p><b>交易闭环现成</b>：每本手帐内嵌飞猪预订链接（机票/民宿/门票/一日游）——种草内容与交易在同一页完成；B 端还可与文旅局/IP 方合作官方打卡线路（各地文旅已有此 KPI）。</p></div>
+  <div class="evo">
+    <span>大陆热播剧</span><span>经典长尾剧</span><span>港台剧</span><span>韩剧/日剧</span><span>电影</span><span>综艺</span><span>动漫圣地</span>
+  </div>
+  <p style="font-size:13.5px;color:#8a8172">demo 已收录三部代表作验证同一套结构：去有风的地方（热播大陆）· 人世间（经典大陆）· 恶作剧之吻（经典台剧·跨境，机票/酒店/POI 已实测全通）。</p>
+</div>
+
+<!-- ④ 如何复现 -->
+<div class="sec repro">
+  <h2><span class="chip">肆</span>如何复现（约15分钟）</h2>
+  <ol>
+    <li>登录阿里云百炼控制台 → <b>Managed Agents</b> → 创建智能体</li>
+    <li>知识库：上传仓库里 4 个文档（三剧知识库 + 手帐输出模板 <code>docs-output-template.md</code>）</li>
+    <li>系统提示词：粘贴 <code>docs-system-prompt.md</code>（从「你是入戏」开始）</li>
+    <li>工具：接入 <b>flyai skill</b>（飞猪官方，实时商品库）</li>
+    <li>对话输入：<b>「我想跟着《去有风的地方》去大理，成都出发 3 天慢节奏」</b>——智能体检索知识库 → flyai 实查 → 编排动线 → 渲染输出</li>
+  </ol>
+  <div class="note">仓库地址：github.com/xiaomo-agi/feizhu-ruxi-demo（demo 页 / 知识库 / 提示词 / 输出模板全部开源）。裸 agent 未挂输出模板时输出朴素 HTML 且默认给 Google Maps 链接——挂上模板/渲染 skill 后即稳定产出本站展示效果，坐标→高德 URI 规则已固化在模板中。</div>
+</div>
+
+<footer>2026 飞猪 AI 旅行创新大赛 · 团队：小mo AI · 数据来自飞猪实时查询，价格以预订时为准</footer>
+</div>
+</body>
+</html>
