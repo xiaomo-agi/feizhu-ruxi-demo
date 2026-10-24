@@ -16,7 +16,7 @@ h1{font-size:44px;color:var(--navy);letter-spacing:6px;margin:10px 0 6px}
 .sub{color:#8a8172;font-size:16px;margin-bottom:8px}
 .tagline{display:inline-block;background:#fff;border:1.5px dashed var(--navy);border-radius:999px;padding:6px 20px;font-size:14px;color:var(--navy);margin:14px 0 36px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin-bottom:40px}
-a.card{display:block;text-decoration:none;background:#fff;padding:14px 14px 18px;box-shadow:0 10px 30px rgba(31,42,73,.16);transition:all .3s;position:relative}
+a.card{display:block;text-decoration:none;background:#fff;padding:14px 14px 18px;box-shadow:0 10px 30px rgba(31,42,73,.16);transition:all .3s;position:relative;cursor:pointer}
 a.card:nth-child(1){transform:rotate(-1.5deg)}
 a.card:nth-child(2){transform:rotate(1.3deg)}
 a.card:hover{transform:rotate(0) translateY(-6px);box-shadow:0 18px 44px rgba(31,42,73,.24)}
@@ -28,13 +28,14 @@ a.card:hover{transform:rotate(0) translateY(-6px);box-shadow:0 18px 44px rgba(31
 .card .meta{padding:14px 6px 0;text-align:left}
 .card .meta b{color:#1f2a49;font-size:16.5px}
 .card .meta span{display:block;color:#8a8172;font-size:13.5px;margin-top:4px;line-height:1.7}
-.card .go{display:block;margin-top:14px;background:var(--navy);color:#fff;font-size:16px;padding:11px 0;border-radius:8px;text-align:center;letter-spacing:2px;box-shadow:0 4px 12px rgba(44,58,99,.35)}
+.card .go{display:block;margin-top:14px;background:var(--navy);color:#ffffff;font-size:17px;font-weight:700;padding:12px 0;border-radius:10px;text-align:center;letter-spacing:3px;box-shadow:0 5px 14px rgba(44,58,99,.35);transition:all .25s}
 a.card{cursor:pointer}
-a.card:hover .go{background:#c9556e}
-.card .go:hover{background:#1f2a49}
+a.card:hover .go{background:var(--navy-deep);box-shadow:0 8px 20px rgba(44,58,99,.45)}
 .tape{position:absolute;width:84px;height:26px;background:#f0d9a8;opacity:.82;top:-11px;left:50%;transform:translateX(-50%) rotate(-3deg);box-shadow:0 2px 6px rgba(0,0,0,.12)}
 .foot{font-size:12.5px;color:#a89c86;line-height:2}
 .foot b{color:#8a7d63}
+.about-link{display:block;width:fit-content;margin:2px auto 30px;background:#fff;border:2px solid var(--navy);border-radius:999px;padding:10px 30px;text-decoration:none;color:var(--navy);font-size:15px;font-weight:700;transition:all .25s;box-shadow:0 4px 12px rgba(44,58,99,.18)}
+.about-link:hover{background:var(--navy);color:#fff;transform:translateY(-2px);box-shadow:0 8px 20px rgba(44,58,99,.3)}
 </style>
 </head>
 <body>
@@ -64,6 +65,8 @@ a.card:hover .go{background:#c9556e}
       </div>
     </a>
   </div>
+
+  <a class="about-link" href="about.html">📖 它是什么 · 怎么跑起来的 · 如何复现（讲解页）</a>
 
   <div class="foot">
     <b>入戏 · 入戏智能体</b>：剧知识库（取景点位/机位/台词）× 飞猪实时库存 × 手帐式渲染<br>
