@@ -148,9 +148,18 @@ footer{margin-top:36px;text-align:center;font-size:12.5px;color:#a89c86}
   .day-card .d-num{min-width:74px}
   .day-card .d-num b{font-size:26px}
 }
+
+.topnav{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:99;display:flex;gap:2px;
+  background:rgba(255,255,255,.93);backdrop-filter:blur(8px);border:1.5px dashed var(--line,#d9cfbc);
+  border-radius:999px;padding:5px 8px;box-shadow:0 5px 16px rgba(0,0,0,.14)}
+.topnav a{text-decoration:none;font-size:13px;color:#5d5442;padding:5px 13px;border-radius:999px;transition:all .2s;white-space:nowrap}
+.topnav a:hover{background:#f0e9da;color:#2c3a63}
+.topnav a.cur{background:var(--navy);color:#fff}
+@media(max-width:520px){.topnav a{font-size:12px;padding:4px 9px}}
 </style>
 </head>
 <body>
+<nav class="topnav"><a href="index.html">🏠 首页</a><a href="about.html">📖 讲解</a><a href="kiss.html" class="cur">💕 恶吻</a><a href="dali.html">🌿 大理</a></nav>
 <div class="wrap">
 
   <!-- 封面 -->
